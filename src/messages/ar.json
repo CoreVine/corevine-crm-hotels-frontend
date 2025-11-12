@@ -1,0 +1,7 @@
+{
+  "welcome": "Welcome to the app",
+  "messages": {
+    "invalidEmail": "Invalid email",
+    "invalidPassword": "Password must be at least 8 characters long"
+  }
+}
