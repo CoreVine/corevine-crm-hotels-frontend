@@ -3,6 +3,8 @@ import { LoginForm } from "./_components/login-form"
 import { getUser } from "@/actions/auth"
 import { redirect } from "next/navigation"
 
+export const dynamic = 'force-dynamic'
+
 export const metadata: Metadata = {
   title: "Login",
   description: "Login page"
