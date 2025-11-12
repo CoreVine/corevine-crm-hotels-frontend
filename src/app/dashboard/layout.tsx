@@ -5,6 +5,8 @@ import { SidebarProvider } from "@/components/ui/sidebar"
 import { getUser } from "@/actions/auth"
 import { redirect } from "next/navigation"
 
+export const dynamic = 'force-dynamic'
+
 export default async function AuthorizedLayout({ children }: { children: React.ReactNode }) {
   const user = await getUser()
   if (!user) return redirect("/login")
