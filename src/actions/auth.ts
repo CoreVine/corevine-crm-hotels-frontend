@@ -20,7 +20,11 @@ export async function loginAction(data: LoginData) {
     const response = await postRequest<LoginResponse>("/login", data)
     const store = await cookies()
     if (response.status === 200) {
-      store.set("token", response.data.token, {
+      store.set(AUTH_COOKIE, response.data.token, {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === 'production',
+        sameSite: 'lax',
+        path: '/',
         expires: new Date(Date.now() + (data?.rememberMe ? 7 : 1) * 24 * 60 * 60 * 1000)
       })
     }

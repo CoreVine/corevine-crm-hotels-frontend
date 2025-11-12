@@ -33,7 +33,7 @@ export const agentState = [
 ]
 
 export const agentRoles = [
-  { name: "Admin", value: "pending" },
+  { name: "Admin", value: "admin" },
   { name: "Reservation User", value: "reservation" },
   { name: "Finance User", value: "finance" }
 ]

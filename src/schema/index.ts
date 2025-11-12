@@ -31,7 +31,7 @@ export const AgentSchema = {
     contact_number: z.string().nonempty("Contact Number is required"),
     address: z.string().nonempty("Address is required"),
     role: z.enum(["admin", "reservation", "finance"]),
-    state: z.enum(["pending", "approved"])
+    state: z.enum(["pending", "approved", "active"])
   })
 }
 

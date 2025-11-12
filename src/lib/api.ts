@@ -9,10 +9,15 @@ export const responseCodes = {
 };
 
 export function loadDefaultHeaders(token?: string, rest?: any): any {
-  return {
+  const headers: any = {
     Accept: "application/json",
-    Authorization: `Bearer ${token}`,
     "Content-Type": "application/json",
     ...rest
   };
+  
+  if (token) {
+    headers.Authorization = `Bearer ${token}`;
+  }
+  
+  return headers;
 }
